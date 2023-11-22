@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categorias",
+  "info": {
+    "singularName": "categoria",
+    "pluralName": "categorias",
+    "displayName": "categoria"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "subcategorias": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::subcategoria.subcategoria",
+      "mappedBy": "categorias"
+    }
+  }
+}
